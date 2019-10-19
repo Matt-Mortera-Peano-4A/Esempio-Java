@@ -6,6 +6,7 @@
 package calcolo.java;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,13 +18,11 @@ public class Calcolo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int b, h, area, perimetro;
+        int b, h;
         Scanner tastiera = new Scanner(System.in);
 
-        System.out.print("Inserisci la base: ");
-        b = tastiera.nextInt();
-        System.out.print("Inserisci l'altezza: ");
-        h = tastiera.nextInt();
+        b = Integer.parseInt(JOptionPane.showInputDialog("Inserire la base"));
+        h = Integer.parseInt(JOptionPane.showInputDialog("Inserire l'altezza"));
 
         System.out.println("Area: " + calcolo(b, h, 'a'));
         System.out.println("Perimetro: " + calcolo(b, h, 'p'));
@@ -34,6 +33,7 @@ public class Calcolo {
 
         //se mettiamo l'istruzione break
         //il compilatore si accorge del dead code
+        
         switch (c) {
             case 'p':
                 return 2 * (b + h); //break
@@ -41,6 +41,7 @@ public class Calcolo {
                 return b * h; //break
             default:
                 return 0; //break
+                
         }
     }
 }
