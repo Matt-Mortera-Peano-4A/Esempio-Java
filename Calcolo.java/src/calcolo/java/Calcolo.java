@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author falsetti.francesco
+ * @author mortera.matt
  */
 public class Calcolo {
 
